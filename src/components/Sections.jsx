@@ -21,7 +21,6 @@ function setupCardMotion(selector, scope) {
 
   cards.forEach((card, index) => {
     const icon = card.querySelector('svg')
-    const accent = card.querySelector('.card-corner, .saving-sticker')
 
     if (icon) {
       gsap.to(icon, {
@@ -34,15 +33,6 @@ function setupCardMotion(selector, scope) {
       })
     }
 
-    if (accent) {
-      gsap.to(accent, {
-        rotation: index % 2 === 0 ? 14 : -10,
-        duration: 3.4 + index * 0.3,
-        repeat: -1,
-        yoyo: true,
-        ease: 'sine.inOut',
-      })
-    }
 
     if (!canHover) return
 
@@ -101,7 +91,7 @@ export function HeroSection() {
         .from('.hero-support > *', { y: 24, autoAlpha: 0, stagger: 0.09, duration: 0.65 }, '-=0.45')
         .from('.hero-art', { xPercent: 12, autoAlpha: 0, duration: 1.05 }, '-=0.9')
         .from('.hero-cart__crate', { y: -80, autoAlpha: 0, stagger: 0.12, duration: 0.75 }, '-=0.55')
-        .from('.hero-art__badge, .hero-art__label', { scale: 0, autoAlpha: 0, stagger: 0.1, duration: 0.5 }, '-=0.4')
+        .from('.hero-art__label', { scale: 0, autoAlpha: 0, stagger: 0.1, duration: 0.5 }, '-=0.4')
         .from('.hero-foot', { y: 20, autoAlpha: 0, duration: 0.6 }, '-=0.3')
 
       gsap.to('.hero-art svg', {
@@ -126,9 +116,8 @@ export function HeroSection() {
           </h1>
           <p className="hero-brand-tagline">— bersama UMKM Solo Raya lebih kuat.</p>
           <div className="hero-support">
-            <h2>Semua yang usahamu butuhkan, terhubung dalam Pull.</h2>
             <p>
-              Hemat hingga 28% lewat patungan bahan baku, temukan tenaga kerja harian dalam hitungan jam, dan bangun etalase digital otomatis dengan QR Code — gratis untuk mulai.
+              Patungan bahan baku bersama UMKM lain, temukan tenaga kerja harian dalam hitungan jam, dan bangun etalase digital otomatis dengan QR Code — gratis untuk mulai.
             </p>
             <a className="pill pill--hero" href="#solusi">
               <span>Mulai Sekarang</span>
@@ -275,7 +264,6 @@ export function SolutionSection() {
                 <h3>{solution.title}</h3>
                 <p>{solution.description}</p>
               </div>
-              {index === 0 && <span className="saving-sticker">HEMAT<br /><b>28%</b></span>}
             </article>
           </div>
         ))}

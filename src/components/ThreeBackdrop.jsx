@@ -67,7 +67,7 @@ export default function ThreeBackdrop() {
           float d = distance(gl_PointCoord, vec2(0.5));
           if (d > 0.5) discard;
           float glow = smoothstep(0.5, 0.0, d);
-          gl_FragColor = vec4(0.75, 0.94, 0.30, glow * vAlpha);
+          gl_FragColor = vec4(0.65, 0.78, 0.25, glow * vAlpha);
         }
       `,
     })

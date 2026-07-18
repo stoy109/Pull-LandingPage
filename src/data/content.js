@@ -24,7 +24,7 @@ export const solutions = [
     icon: 'pool',
     title: 'Pool patungan bahan baku',
     description:
-      'Gabung ke pool bareng UMKM lain, dapat harga grosir tanpa harus beli banyak sendiri. Hemat hingga 28% per transaksi.',
+      'Gabung ke pool bareng UMKM lain dan dapat harga grosir tanpa harus beli banyak sendiri.',
   },
   {
     icon: 'work',

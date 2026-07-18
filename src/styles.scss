@@ -1,12 +1,14 @@
-$green: #0b3b2b;
-$green-deep: #06271d;
-$green-ink: #071f17;
-$lime: #b9f33d;
-$yellow: #f7d547;
-$orange: #f26a2e;
-$cream: #f3ead5;
-$white: #fffdf7;
-$muted: #a8b6a7;
+// 60% primary foundation, 30% supporting green, 10% warm accents.
+$green: #299a45;
+$green-deep: #145c46;
+$green-ink: #0b3025;
+$lime: #a7c840;
+$yellow: #edc113;
+$orange: #ec8e3b;
+$red: #b61f3e;
+$cream: #f7f7f0;
+$white: #ffffff;
+$muted: #a7c840;
 
 :root {
   color: $white;
@@ -20,6 +22,7 @@ $muted: #a8b6a7;
   --lime: #{$lime};
   --yellow: #{$yellow};
   --orange: #{$orange};
+  --red: #{$red};
   --cream: #{$cream};
   --white: #{$white};
   --pad: clamp(1.25rem, 4vw, 4.5rem);
@@ -548,9 +551,9 @@ body.menu-open {
   position: relative;
   min-height: 100svh;
   overflow: hidden;
-  padding: clamp(7.4rem, 12vh, 9rem) var(--pad) 2rem;
+  padding: clamp(5.5rem, 8vh, 6.5rem) var(--pad) 1rem;
   isolation: isolate;
-  background: $green;
+  background: $green-deep;
 
   &::before {
     position: absolute;
@@ -581,7 +584,7 @@ body.menu-open {
 .hero-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.03fr) minmax(24rem, 0.97fr);
-  align-items: center;
+  align-items: start;
   width: 100%;
   max-width: 100rem;
   min-height: calc(100svh - 12rem);
@@ -591,7 +594,7 @@ body.menu-open {
 .hero-copy {
   position: relative;
   z-index: 3;
-  padding-top: 2rem;
+  padding-top: 1rem;
 }
 
 .hero-kicker {
@@ -658,23 +661,18 @@ body.menu-open {
   margin-top: clamp(1.7rem, 4vh, 2.8rem);
   padding-left: 0;
 
-  h2 {
-    color: $yellow;
-    font-family: var(--display);
-    font-size: clamp(1.05rem, 1.5vw, 1.45rem);
-    font-weight: 760;
-    letter-spacing: -0.035em;
-    line-height: 1.1;
-  }
+
 
   p {
+    grid-column: 1 / -1;
+    max-width: 31rem;
     color: rgba($white, 0.7);
     font-size: clamp(0.82rem, 1vw, 0.95rem);
     line-height: 1.7;
   }
 
   .pill {
-    grid-column: 2;
+    grid-column: 1;
     justify-self: start;
     margin-top: 0.35rem;
   }
@@ -710,36 +708,7 @@ body.menu-open {
     stroke-width: 4;
   }
 
-  &__badge {
-    position: absolute;
-    top: 13%;
-    right: 2%;
-    display: grid;
-    width: clamp(6.5rem, 9vw, 8.8rem);
-    aspect-ratio: 1;
-    place-content: center;
-    border: 2px solid $green-ink;
-    border-radius: 50%;
-    background: $yellow;
-    color: $green-ink;
-    text-align: center;
-    transform: rotate(9deg);
-    box-shadow: 8px 8px 0 $green-ink;
 
-    strong {
-      font-family: var(--display);
-      font-size: clamp(1.7rem, 3vw, 3rem);
-      letter-spacing: -0.08em;
-      line-height: 0.95;
-    }
-
-    span {
-      font-size: 0.61rem;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-  }
 
   &__label {
     position: absolute;
@@ -899,7 +868,7 @@ body.menu-open {
   overflow: hidden;
   border: 2px solid $green-ink;
   border-radius: clamp(1.8rem, 3vw, 3.4rem);
-  background: $orange;
+  background: $cream;
   color: $green-ink;
   box-shadow: 0.8rem 0.8rem 0 rgba($green-ink, 0.65);
 
@@ -909,7 +878,7 @@ body.menu-open {
     right: -4rem;
     width: 11rem;
     height: 11rem;
-    border: 2px dashed rgba($green-ink, 0.28);
+    border: 2px dashed rgba($orange, 0.75);
     border-radius: 50%;
     content: '';
   }
@@ -958,8 +927,12 @@ body.menu-open {
 .solution-section {
   position: relative;
   overflow: hidden;
-  background: $cream;
-  color: $green-ink;
+  background: $green;
+  color: $white;
+
+  .section-tag--dark {
+    color: $white;
+  }
 
   &::before {
     position: absolute;
@@ -967,7 +940,7 @@ body.menu-open {
     right: -5vw;
     width: 31vw;
     height: 31vw;
-    border: 1px dashed rgba($green-ink, 0.22);
+    border: 1px dashed rgba($white, 0.25);
     border-radius: 50%;
     content: '';
   }
@@ -985,7 +958,7 @@ body.menu-open {
 
   i {
     height: 1px;
-    background: $green-ink;
+    background: $white;
     transform-origin: left;
   }
 }
@@ -1009,7 +982,7 @@ body.menu-open {
     grid-column: 2;
     grid-row: 2;
     margin-bottom: 0.35rem;
-    color: rgba($green-ink, 0.72);
+    color: rgba($white, 0.72);
   }
 }
 
@@ -1023,7 +996,7 @@ body.menu-open {
   }
 
   &--indent {
-    color: $green;
+    color: $yellow;
     text-align: right;
   }
 }
@@ -1052,7 +1025,7 @@ body.menu-open {
   overflow: hidden;
   border: 2px solid $green-ink;
   border-radius: clamp(1.8rem, 3vw, 3.2rem);
-  background: $lime;
+  background: $cream;
   color: $green-ink;
   box-shadow: 0.7rem 0.7rem 0 $green-ink;
 
@@ -1097,30 +1070,7 @@ body.menu-open {
   }
 }
 
-.saving-sticker {
-  position: absolute;
-  top: 37%;
-  right: 1.4rem;
-  display: grid;
-  width: 5.4rem;
-  height: 5.4rem;
-  place-content: center;
-  border: 2px solid $green-ink;
-  border-radius: 50%;
-  background: $orange;
-  font-size: 0.56rem;
-  font-weight: 850;
-  letter-spacing: 0.08em;
-  line-height: 1;
-  text-align: center;
-  transform: rotate(10deg);
 
-  b {
-    font-family: var(--display);
-    font-size: 1.7rem;
-    letter-spacing: -0.08em;
-  }
-}
 
 /* Pinned flow */
 .flow-section {
@@ -1131,7 +1081,7 @@ body.menu-open {
 
 .flow-pin {
   min-height: 100svh;
-  padding: clamp(5.5rem, 8vh, 7rem) var(--pad) clamp(2rem, 4vh, 4rem);
+  padding: clamp(3rem, 4vh, 4rem) var(--pad) clamp(2rem, 4vh, 4rem);
   overflow: hidden;
   background: $green-deep;
 }
@@ -1141,6 +1091,7 @@ body.menu-open {
   gap: 1.25rem;
   max-width: 100rem;
   margin: 0 auto clamp(2rem, 5vh, 4rem);
+  transform: translateY(-2rem);
 
   h2 {
     max-width: 19ch;
@@ -1163,6 +1114,7 @@ body.menu-open {
   min-height: clamp(32rem, 66vh, 48rem);
   margin: 0 auto;
   padding-bottom: 4.5rem;
+  transform: translateY(-2rem);
 }
 
 .flow-stage,
@@ -1672,7 +1624,7 @@ body.menu-open {
 /* Comparison */
 .comparison-section {
   overflow: hidden;
-  background: $yellow;
+  background: $cream;
   color: $green-ink;
 }
 
@@ -1747,7 +1699,8 @@ body.menu-open {
   place-items: center;
   border: 2px solid $green-ink;
   border-radius: 50%;
-  background: $orange;
+  background: $red;
+  color: $white;
   font-size: 1.35rem;
   font-style: normal;
   box-shadow: 0.35rem 0.35rem 0 $green-ink;
@@ -1758,7 +1711,7 @@ body.menu-open {
   grid-template-columns: 0.72fr 1fr 1fr;
   min-height: 8rem;
   border-bottom: 2px solid $green-ink;
-  background: $yellow;
+  background: $cream;
   transform-origin: left;
 
   > div {
@@ -1980,8 +1933,12 @@ body.menu-open {
   justify-content: center;
   padding: clamp(7rem, 12vw, 11rem) var(--pad);
   overflow: hidden;
-  background: $orange;
-  color: $green-ink;
+  background: $green-deep;
+  color: $white;
+
+  .section-tag--dark {
+    color: $white;
+  }
 
   > *:not(.closing-orbit) {
     position: relative;
@@ -2025,7 +1982,7 @@ body.menu-open {
   right: -8%;
   left: auto;
   width: min(58vw, 52rem);
-  border-color: rgba($green-ink, 0.3);
+  border-color: rgba($white, 0.3);
   transform: translateY(-50%);
   animation: none;
 
@@ -2434,9 +2391,6 @@ body.menu-open {
     margin-bottom: -3.8rem;
   }
 
-  .hero-art__badge {
-    right: 10%;
-  }
 
   .hero-foot {
     grid-template-columns: 1fr 1fr;

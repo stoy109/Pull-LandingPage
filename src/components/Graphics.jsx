@@ -83,37 +83,33 @@ export function HeroRouteArt() {
           <circle cx="615" cy="190" r="5" fill="currentColor" />
         </g>
         <g className="hero-cart">
-          <path d="M241 270h288l-37 190-212 25-39-215Z" fill="#F3EAD5" stroke="#071F17" strokeWidth="8" strokeLinejoin="round" />
-          <path d="m260 313 250-15M274 368l225-17M286 424l201-16M332 278l14 195m60-202 3 194m72-188-10 177" stroke="#0B3B2B" strokeWidth="5" opacity=".7" />
-          <path d="M243 271 218 211h-74" stroke="#F7D547" strokeWidth="18" strokeLinecap="round" strokeLinejoin="round" />
-          <path d="M279 486h229" stroke="#F7D547" strokeWidth="16" strokeLinecap="round" />
+          <path d="M241 270h288l-37 190-212 25-39-215Z" fill="#F7F7F0" stroke="#0B3025" strokeWidth="8" strokeLinejoin="round" />
+          <path d="m260 313 250-15M274 368l225-17M286 424l201-16M332 278l14 195m60-202 3 194m72-188-10 177" stroke="#145C46" strokeWidth="5" opacity=".7" />
+          <path d="M243 271 218 211h-74" stroke="#EDC113" strokeWidth="18" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M279 486h229" stroke="#EDC113" strokeWidth="16" strokeLinecap="round" />
           <g className="hero-cart__wheel hero-cart__wheel--one">
-            <circle cx="318" cy="541" r="42" fill="#F26A2E" stroke="#071F17" strokeWidth="8" />
-            <circle cx="318" cy="541" r="13" fill="#F7D547" />
-            <path d="M318 504v74m-37-37h74" stroke="#071F17" strokeWidth="5" />
+            <circle cx="318" cy="541" r="42" fill="#B61F3E" stroke="#0B3025" strokeWidth="8" />
+            <circle cx="318" cy="541" r="13" fill="#EDC113" />
+            <path d="M318 504v74m-37-37h74" stroke="#0B3025" strokeWidth="5" />
           </g>
           <g className="hero-cart__wheel hero-cart__wheel--two">
-            <circle cx="466" cy="541" r="42" fill="#B9F33D" stroke="#071F17" strokeWidth="8" />
-            <circle cx="466" cy="541" r="13" fill="#F7D547" />
-            <path d="M466 504v74m-37-37h74" stroke="#071F17" strokeWidth="5" />
+            <circle cx="466" cy="541" r="42" fill="#A7C840" stroke="#0B3025" strokeWidth="8" />
+            <circle cx="466" cy="541" r="13" fill="#EDC113" />
+            <path d="M466 504v74m-37-37h74" stroke="#0B3025" strokeWidth="5" />
           </g>
           <g className="hero-cart__crate hero-cart__crate--one">
-            <rect x="289" y="190" width="91" height="87" rx="9" fill="#B9F33D" stroke="#071F17" strokeWidth="7" />
-            <path d="m289 217 46 20 45-20m-45 20v40" stroke="#071F17" strokeWidth="5" />
+            <rect x="289" y="190" width="91" height="87" rx="9" fill="#A7C840" stroke="#0B3025" strokeWidth="7" />
+            <path d="m289 217 46 20 45-20m-45 20v40" stroke="#0B3025" strokeWidth="5" />
           </g>
           <g className="hero-cart__crate hero-cart__crate--two">
-            <rect x="393" y="158" width="106" height="113" rx="9" fill="#F26A2E" stroke="#071F17" strokeWidth="7" />
-            <path d="m393 191 53 23 53-23m-53 23v57" stroke="#071F17" strokeWidth="5" />
-            <circle cx="447" cy="181" r="8" fill="#F7D547" />
+            <rect x="393" y="158" width="106" height="113" rx="9" fill="#EC8E3B" stroke="#0B3025" strokeWidth="7" />
+            <path d="m393 191 53 23 53-23m-53 23v57" stroke="#0B3025" strokeWidth="5" />
+            <circle cx="447" cy="181" r="8" fill="#EDC113" />
           </g>
-          <path d="M541 332c42-47 79-63 111-47" stroke="#F7D547" strokeWidth="7" strokeLinecap="round" strokeDasharray="2 18" />
-          <path d="m640 267 18 18-21 14" stroke="#F7D547" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M541 332c42-47 79-63 111-47" stroke="#EDC113" strokeWidth="7" strokeLinecap="round" strokeDasharray="2 18" />
+          <path d="m640 267 18 18-21 14" stroke="#EDC113" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" />
         </g>
       </svg>
-      <div className="hero-art__badge">
-        <strong>28%</strong>
-        <span>lebih hemat</span>
-      </div>
       <span className="hero-art__label hero-art__label--solo">SOLO</span>
       <span className="hero-art__label hero-art__label--raya">RAYA</span>
     </div>
@@ -161,10 +157,10 @@ export function PhaseIllustration({ type }) {
         <svg viewBox="0 0 560 500" fill="none">
           <path d="M84 267c68-153 191-164 281-51 75 94 64 190 138 215" stroke="currentColor" strokeWidth="4" strokeDasharray="5 14" />
           <path d="M93 127c96-66 238-42 317 55" stroke="currentColor" strokeWidth="4" strokeDasharray="5 14" />
-          <circle cx="90" cy="129" r="13" fill="#F7D547" />
-          <circle cx="83" cy="269" r="13" fill="#F7D547" />
-          <circle cx="411" cy="183" r="13" fill="#F7D547" />
-          <circle cx="504" cy="430" r="13" fill="#F7D547" />
+          <circle cx="90" cy="129" r="13" fill="#EDC113" />
+          <circle cx="83" cy="269" r="13" fill="#EDC113" />
+          <circle cx="411" cy="183" r="13" fill="#EDC113" />
+          <circle cx="504" cy="430" r="13" fill="#EDC113" />
         </svg>
         <div className="pool-ticket"><small>POOL #018</small><strong>Minyak goreng</strong><span><b>18</b> UMKM bergabung</span><i>72% terpenuhi</i></div>
         <div className="job-ticket"><span>Butuh hari ini</span><strong>2 kru produksi</strong><small>Laweyan · 08.00–17.00</small><i>Lamar cepat ↗</i></div>
