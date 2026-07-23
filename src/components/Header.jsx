@@ -87,8 +87,8 @@ export default function Header() {
           {navigation.map(([label, href]) => <a href={href} key={href}>{label}</a>)}
         </nav>
         <div className="nav-actions">
-          <a className="nav-login" href="#masuk">Masuk</a>
-          <a className="pill pill--small pill--lime" href="#daftar">
+          <a className="nav-login" href="https://pull-phi.vercel.app/">Masuk</a>
+          <a className="pill pill--small pill--lime" href="https://pull-phi.vercel.app/">
             Daftar <span aria-hidden="true">↗</span>
           </a>
           <button

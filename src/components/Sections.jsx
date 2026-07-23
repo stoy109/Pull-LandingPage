@@ -119,7 +119,7 @@ export function HeroSection() {
             <p>
               Patungan bahan baku bersama UMKM lain, temukan tenaga kerja harian dalam hitungan jam, dan bangun etalase digital otomatis dengan QR Code — gratis untuk mulai.
             </p>
-            <a className="pill pill--hero" href="#solusi">
+            <a className="pill pill--hero" href="https://pull-phi.vercel.app/">
               <span>Mulai Sekarang</span>
               <i aria-hidden="true">↘</i>
             </a>
@@ -374,7 +374,7 @@ export function ClosingSection() {
         <h2 className="closing-heading">Bangun usaha yang lebih kuat bersama Pull.</h2>
         <p className="closing-tagline">Satu jaringan, tiga solusi, seribu peluang — bersama UMKM Solo Raya lebih kuat.</p>
         <p className="closing-copy">Mulai dari kebutuhan paling dekat hari ini. Daftar gratis dan temukan jaringan usaha di Solo Raya.</p>
-        <a className="pill pill--closing" href="#beranda"><span>Gabung Pull — Gratis</span><i>↗</i></a>
+        <a className="pill pill--closing" href="https://pull-phi.vercel.app/"><span>Gabung Pull — Gratis</span><i>↗</i></a>
       </div>
 
       <div className="footer-grid">
