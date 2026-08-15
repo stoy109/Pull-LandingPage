@@ -18,8 +18,8 @@
     "three": "^0.169.0"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^4.3.3",
+    "@vitejs/plugin-react": "^4.7.0",
     "sass": "^1.80.6",
-    "vite": "^5.4.11"
+    "vite": "^6.4.3"
   }
 }
