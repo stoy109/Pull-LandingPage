@@ -4,8 +4,6 @@ A cinematic landing page for **Pull**, a platform concept built to help Indonesi
 
 This project turns a practical product idea into an expressive scroll-driven web experience: pooled raw-material buying, informal job discovery, verified work history, public UMKM profiles, and QR-powered discovery — all presented through motion, layered visuals, and a modern editorial layout.
 
-![Pull landing page](./logo.svg)
-
 ## ✨ What is Pull?
 
 Pull is designed around three everyday problems faced by small businesses:
