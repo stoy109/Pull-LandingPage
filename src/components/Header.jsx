@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import BrandMark from './BrandMark'
+import { socialLinks } from '../data/content'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -11,13 +12,6 @@ const navigation = [
   ['Solusi', '#solusi'],
   ['Alur Sistem', '#alur'],
   ['Kenapa Pull', '#kenapa'],
-]
-
-const social = [
-  ['Instagram', 'https://instagram.com'],
-  ['WhatsApp', 'https://wa.me/'],
-  ['LinkedIn', 'https://linkedin.com'],
-  ['Email', 'mailto:halo@pull.id'],
 ]
 
 export default function Header() {
@@ -122,8 +116,8 @@ export default function Header() {
           <p>Satu jaringan, tiga solusi, seribu peluang — bersama UMKM Solo Raya lebih kuat.</p>
         </div>
         <div className="mobile-menu__footer">
-          <div><span>Sosial</span>{social.map(([label, href]) => <a href={href} key={label}>{label}</a>)}</div>
-          <div><span>Legal</span><a href="#legal">Kebijakan Privasi</a><a href="#legal">Syarat Layanan</a><a href="mailto:halo@pull.id">Kontak</a></div>
+          <div><span>Sosial</span>{socialLinks.map(([label, href]) => <a href={href} key={label}>{label}</a>)}</div>
+          <div><span>Legal</span><a href="mailto:halo@pull.id">Kontak</a></div>
         </div>
       </div>
     </header>

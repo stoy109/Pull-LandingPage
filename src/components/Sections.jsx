@@ -2,17 +2,10 @@ import { useLayoutEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import BrandMark from './BrandMark'
-import { comparisons, problems, solutions } from '../data/content'
+import { comparisons, problems, socialLinks, solutions } from '../data/content'
 import { FeatureIcon, HeroRouteArt, JourneyPath } from './Graphics'
 
 gsap.registerPlugin(ScrollTrigger)
-
-const socialLinks = [
-  ['Instagram', 'https://instagram.com'],
-  ['WhatsApp', 'https://wa.me/'],
-  ['LinkedIn', 'https://linkedin.com'],
-  ['Email', 'mailto:halo@pull.id'],
-]
 
 function setupCardMotion(selector, scope) {
   const cards = gsap.utils.toArray(selector, scope)
@@ -393,10 +386,8 @@ export function ClosingSection() {
           <span>Sosial</span>
           {socialLinks.map(([label, href]) => <a href={href} key={label}>{label} ↗</a>)}
         </div>
-        <div className="footer-column" id="legal">
+        <div className="footer-column">
           <span>Legal</span>
-          <a href="#legal">Kebijakan Privasi</a>
-          <a href="#legal">Syarat Layanan</a>
           <a href="mailto:halo@pull.id">Kontak</a>
         </div>
         <a className="footer-contact" href="mailto:halo@pull.id">
