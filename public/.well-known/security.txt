@@ -1,0 +1,7 @@
+# Security contact for the Pull landing page (UMKM Solo Raya).
+# Full policy: see SECURITY.md in the repository.
+Contact: mailto:halo@pull.id
+Expires: 2027-10-18T00:00:00.000Z
+Preferred-Languages: id, en
+Canonical: https://pull-landing-page.vercel.app/.well-known/security.txt
+Policy: https://github.com/stoy109/Pull-LandingPage/blob/main/SECURITY.md
