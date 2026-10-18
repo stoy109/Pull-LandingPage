@@ -57,8 +57,8 @@ export default function FlowSection() {
 
       timeline
         .from('.flow-eyebrow', { y: -16, duration: 0.25 })
-        .from('.flow-panel:first-child .phase-visual > *', { y: 40, autoAlpha: 0, stagger: 0.06, duration: 0.55 }, '<')
-        .from('.flow-copy-wrap:first-child li', { x: 38, autoAlpha: 0, stagger: 0.07, duration: 0.45 }, '<0.05')
+        .from('.flow-panel:first-child .phase-visual > *', { y: 40, stagger: 0.06, duration: 0.55 }, '<')
+        .from('.flow-copy-wrap:first-child li', { x: 38, stagger: 0.07, duration: 0.45 }, '<0.05')
         .to({}, { duration: 0.28 })
 
       for (let index = 1; index < phases.length; index += 1) {
