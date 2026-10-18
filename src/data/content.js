@@ -98,3 +98,7 @@ export const comparisons = [
     pull: 'Satu platform, semua terhubung',
   },
 ]
+
+// Hanya tautan yang berfungsi. Tambahkan kembali Instagram/LinkedIn/WhatsApp
+// setelah akun resminya ada — jangan kirim placeholder ke pengguna.
+export const socialLinks = [['Email', 'mailto:halo@pull.id']]

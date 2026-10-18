@@ -2,17 +2,10 @@ import { useLayoutEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import BrandMark from './BrandMark'
-import { comparisons, problems, solutions } from '../data/content'
+import { comparisons, problems, socialLinks, solutions } from '../data/content'
 import { FeatureIcon, HeroRouteArt, JourneyPath } from './Graphics'
 
 gsap.registerPlugin(ScrollTrigger)
-
-const socialLinks = [
-  ['Instagram', 'https://instagram.com'],
-  ['WhatsApp', 'https://wa.me/'],
-  ['LinkedIn', 'https://linkedin.com'],
-  ['Email', 'mailto:halo@pull.id'],
-]
 
 function setupCardMotion(selector, scope) {
   const cards = gsap.utils.toArray(selector, scope)
@@ -87,12 +80,12 @@ export function HeroSection() {
       timeline
         .from('.hero-kicker', { scaleX: 0, transformOrigin: 'left', duration: 0.65 })
         .from('.hero-line > span', { yPercent: 105, stagger: 0.1, duration: 0.95 }, '-=0.25')
-        .from('.hero-brand-tagline', { y: 24, autoAlpha: 0, duration: 0.65 }, '-=0.5')
-        .from('.hero-support > *', { y: 24, autoAlpha: 0, stagger: 0.09, duration: 0.65 }, '-=0.45')
-        .from('.hero-art', { xPercent: 12, autoAlpha: 0, duration: 1.05 }, '-=0.9')
+        .from('.hero-brand-tagline', { y: 24, duration: 0.65 }, '-=0.5')
+        .from('.hero-support > *', { y: 24, stagger: 0.09, duration: 0.65 }, '-=0.45')
+        .from('.hero-art', { xPercent: 12, duration: 1.05 }, '-=0.9')
         .from('.hero-cart__crate', { y: -80, autoAlpha: 0, stagger: 0.12, duration: 0.75 }, '-=0.55')
-        .from('.hero-art__label', { scale: 0, autoAlpha: 0, stagger: 0.1, duration: 0.5 }, '-=0.4')
-        .from('.hero-foot', { y: 20, autoAlpha: 0, duration: 0.6 }, '-=0.3')
+        .from('.hero-art__label', { scale: 0, stagger: 0.1, duration: 0.5 }, '-=0.4')
+        .from('.hero-foot', { y: 20, duration: 0.6 }, '-=0.3')
 
       gsap.to('.hero-art svg', {
         yPercent: 8,
@@ -146,7 +139,6 @@ export function ProblemSection() {
     const context = gsap.context(() => {
       gsap.from('.problem-heading > *', {
         y: 56,
-        autoAlpha: 0,
         stagger: 0.1,
         duration: 0.8,
         ease: 'power3.out',
@@ -155,7 +147,6 @@ export function ProblemSection() {
       gsap.from('.problem-card', {
         y: 110,
         rotation: (index) => (index - 1) * 4,
-        autoAlpha: 0,
         stagger: 0.14,
         duration: 0.95,
         ease: 'back.out(1.2)',
@@ -213,7 +204,6 @@ export function SolutionSection() {
     const context = gsap.context(() => {
       gsap.from('.solution-heading > *', {
         y: 58,
-        autoAlpha: 0,
         stagger: 0.1,
         duration: 0.85,
         ease: 'power3.out',
@@ -223,7 +213,6 @@ export function SolutionSection() {
         y: 110,
         scale: 0.92,
         rotation: (index) => (index - 1) * -4,
-        autoAlpha: 0,
         stagger: 0.14,
         duration: 0.95,
         ease: 'back.out(1.15)',
@@ -281,7 +270,6 @@ export function ComparisonSection() {
     const context = gsap.context(() => {
       gsap.from('.compare-title > *', {
         y: 54,
-        autoAlpha: 0,
         stagger: 0.1,
         duration: 0.8,
         ease: 'power3.out',
@@ -339,7 +327,6 @@ export function ClosingSection() {
     const context = gsap.context(() => {
       gsap.from('.closing-main > *:not(.closing-orbit)', {
         y: 52,
-        autoAlpha: 0,
         stagger: 0.1,
         duration: 0.8,
         ease: 'power3.out',
@@ -354,7 +341,6 @@ export function ClosingSection() {
       })
       gsap.from('.footer-grid > *', {
         y: 30,
-        autoAlpha: 0,
         stagger: 0.08,
         duration: 0.65,
         scrollTrigger: { trigger: '.footer-grid', start: 'top 88%' },
@@ -393,10 +379,8 @@ export function ClosingSection() {
           <span>Sosial</span>
           {socialLinks.map(([label, href]) => <a href={href} key={label}>{label} ↗</a>)}
         </div>
-        <div className="footer-column" id="legal">
+        <div className="footer-column">
           <span>Legal</span>
-          <a href="#legal">Kebijakan Privasi</a>
-          <a href="#legal">Syarat Layanan</a>
           <a href="mailto:halo@pull.id">Kontak</a>
         </div>
         <a className="footer-contact" href="mailto:halo@pull.id">

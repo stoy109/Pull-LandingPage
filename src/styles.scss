@@ -2,6 +2,7 @@
 $green: #299a45;
 $green-deep: #145c46;
 $green-ink: #0b3025;
+$green-ink-strong: #032018; // ink for small text on $green (WCAG AA 4.74:1)
 $lime: #a7c840;
 $lime-bright: #bfd854; // teks kecil di atas $green-deep (WCAG AA 4.97:1)
 $yellow: #edc113;
@@ -207,7 +208,7 @@ footer {
     max-width: 33rem;
     margin-top: 1.7rem;
     margin-left: auto;
-    color: rgba($white, 0.66);
+    color: rgba($white, 0.72);
     font-size: clamp(1rem, 1.3vw, 1.2rem);
     line-height: 1.65;
   }
@@ -714,10 +715,10 @@ body.menu-open {
   &__label {
     position: absolute;
     padding: 0.36rem 0.65rem;
-    border: 1px solid rgba($cream, 0.6);
+    border: 1px solid rgba($green-ink-strong, 0.55);
     border-radius: 999px;
     background: $green;
-    color: $cream;
+    color: $green-ink-strong; // 4.74:1 di atas $green
     font-family: var(--display);
     font-size: 0.62rem;
     letter-spacing: 0.16em;
@@ -751,7 +752,7 @@ body.menu-open {
   margin: 0 auto;
   padding-top: 1.2rem;
   border-top: 1px solid rgba($white, 0.18);
-  color: rgba($white, 0.6);
+  color: rgba($white, 0.72);
   font-size: 0.62rem;
   font-weight: 750;
   letter-spacing: 0.13em;
@@ -931,8 +932,9 @@ body.menu-open {
   background: $green;
   color: $white;
 
+  // Teks kecil harus ink gelap: di atas $green, teks putih hanya mencapai 3.62:1.
   .section-tag--dark {
-    color: $white;
+    color: $green-ink-strong;
   }
 
   &::before {
@@ -953,7 +955,7 @@ body.menu-open {
   gap: 1.3rem;
   align-items: center;
   margin-bottom: clamp(4rem, 8vw, 8rem);
-  color: #032018; // WCAG AA 4.74:1 di atas $green
+  color: $green-ink-strong; // WCAG AA 4.74:1 di atas $green
   font-size: 0.62rem;
   font-weight: 800;
   letter-spacing: 0.13em;
@@ -984,7 +986,7 @@ body.menu-open {
     grid-column: 2;
     grid-row: 2;
     margin-bottom: 0.35rem;
-    color: rgba($white, 0.72);
+    color: $green-ink-strong;
   }
 }
 
@@ -1530,7 +1532,7 @@ body.menu-open {
 
 .stars {
   margin-top: 1.3rem;
-  color: $orange;
+  color: #9a5b1f; // 5.02:1 di atas $cream
   font-size: 0.83rem;
   letter-spacing: 0.08em;
 
@@ -2026,7 +2028,7 @@ body.menu-open {
 
   p {
     margin-top: 1.5rem;
-    color: rgba($white, 0.6);
+    color: rgba($white, 0.72);
     font-size: 0.82rem;
     line-height: 1.65;
   }
@@ -2072,13 +2074,15 @@ body.menu-open {
   background: $green;
   transition: border-color 0.3s ease, transform 0.3s ease;
 
+  // Kartu ini berlatar $green - teks kecil pakai ink gelap (4.74:1).
   span {
-    color: rgba($white, 0.55);
+    color: $green-ink-strong;
     font-size: 0.65rem;
   }
 
   strong {
     margin-top: 0.35rem;
+    color: $green-ink-strong;
     font-size: clamp(1rem, 1.4vw, 1.3rem);
   }
 
