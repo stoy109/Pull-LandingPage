@@ -47,7 +47,9 @@ export default function App() {
     const handleAnchor = (event) => {
       const anchor = event.target.closest('a[href^="#"]')
       if (!anchor) return
-      const target = document.querySelector(anchor.getAttribute('href'))
+      const href = anchor.getAttribute('href')
+      if (!href || href === '#' || anchor.classList.contains('skip-link')) return
+      const target = document.querySelector(href)
       if (!target) return
       event.preventDefault()
       if (lenis) lenis.scrollTo(target, { offset: -24 })
@@ -72,7 +74,7 @@ export default function App() {
       <div className="scroll-meter" ref={meterRef} aria-hidden="true" />
       <ThreeBackdrop />
       <Header />
-      <main id="main">
+      <main id="main" tabIndex={-1}>
         <HeroSection />
         <ProblemSection />
         <SolutionSection />

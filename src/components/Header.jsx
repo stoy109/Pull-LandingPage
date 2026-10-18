@@ -24,6 +24,11 @@ export default function Header() {
   const headerRef = useRef(null)
   const menuRef = useRef(null)
   const [menuOpen, setMenuOpen] = useState(false)
+  const menuOpenRef = useRef(menuOpen)
+
+  useEffect(() => {
+    menuOpenRef.current = menuOpen
+  }, [menuOpen])
 
   useEffect(() => {
     const header = headerRef.current
@@ -35,13 +40,13 @@ export default function Header() {
       onUpdate: (self) => {
         const current = self.scroll()
         header.classList.toggle('is-scrolled', current > 80)
-        header.classList.toggle('is-hidden', !menuOpen && current > previous && current > 520)
+        header.classList.toggle('is-hidden', !menuOpenRef.current && current > previous && current > 520)
         previous = current
       },
     })
 
     return () => trigger.kill()
-  }, [menuOpen])
+  }, [])
 
   useEffect(() => {
     const panel = menuRef.current
