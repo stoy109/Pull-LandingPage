@@ -41,7 +41,7 @@ export default function FlowSection() {
 
       gsap.set(panels.slice(1), { autoAlpha: 0, scale: 0.86, rotation: 4, y: 70 })
       gsap.set(copies.slice(1), { autoAlpha: 0, y: 70 })
-      gsap.set(indicators.slice(1), { opacity: 0.28 })
+      gsap.set(indicators.slice(1), { opacity: 0.68 })
 
       const timeline = gsap.timeline({
         scrollTrigger: {
@@ -56,7 +56,7 @@ export default function FlowSection() {
       })
 
       timeline
-        .from('.flow-eyebrow', { y: -16, autoAlpha: 0, duration: 0.25 })
+        .from('.flow-eyebrow', { y: -16, duration: 0.25 })
         .from('.flow-panel:first-child .phase-visual > *', { y: 40, autoAlpha: 0, stagger: 0.06, duration: 0.55 }, '<')
         .from('.flow-copy-wrap:first-child li', { x: 38, autoAlpha: 0, stagger: 0.07, duration: 0.45 }, '<0.05')
         .to({}, { duration: 0.28 })
@@ -66,7 +66,7 @@ export default function FlowSection() {
           .addLabel(`phase-${index}`)
           .to(copies[index - 1], { autoAlpha: 0, y: -50, duration: 0.42 })
           .to(panels[index - 1], { autoAlpha: 0, scale: 0.9, rotation: -4, y: -50, duration: 0.48 }, '<')
-          .to(indicators[index - 1], { opacity: 0.28, duration: 0.2 }, '<')
+          .to(indicators[index - 1], { opacity: 0.68, duration: 0.2 }, '<')
           .fromTo(
             panels[index],
             { autoAlpha: 0, scale: 0.86, rotation: 4, y: 70 },

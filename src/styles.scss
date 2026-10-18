@@ -3,6 +3,7 @@ $green: #299a45;
 $green-deep: #145c46;
 $green-ink: #0b3025;
 $lime: #a7c840;
+$lime-bright: #bfd854; // teks kecil di atas $green-deep (WCAG AA 4.97:1)
 $yellow: #edc113;
 $orange: #ec8e3b;
 $red: #b61f3e;
@@ -481,7 +482,7 @@ body.menu-open {
       transition: color 0.25s ease, padding-left 0.25s ease;
 
       span {
-        color: $lime;
+        color: $lime-bright;
         font-family: var(--body);
         font-size: 0.62rem;
         font-weight: 800;
@@ -645,7 +646,7 @@ body.menu-open {
 .hero-brand-tagline {
   max-width: 31rem;
   margin-top: 1.25rem;
-  color: $lime;
+  color: $lime-bright;
   font-size: clamp(1.05rem, 1.65vw, 1.55rem);
   font-weight: 720;
   letter-spacing: -0.025em;
@@ -952,6 +953,7 @@ body.menu-open {
   gap: 1.3rem;
   align-items: center;
   margin-bottom: clamp(4rem, 8vw, 8rem);
+  color: #032018; // WCAG AA 4.74:1 di atas $green
   font-size: 0.62rem;
   font-weight: 800;
   letter-spacing: 0.13em;
@@ -1173,7 +1175,7 @@ body.menu-open {
 
   &__caption {
     margin-top: 1.3rem;
-    color: rgba($white, 0.55);
+    color: rgba($white, 0.78); // WCAG AA di atas $green-deep
     font-size: 0.85rem;
     font-weight: 680;
     letter-spacing: 0.08em;
@@ -1201,7 +1203,7 @@ body.menu-open {
     }
 
     > span {
-      color: $lime;
+      color: $lime-bright;
       font-family: var(--display);
       font-size: 0.64rem;
       font-weight: 800;
@@ -1329,7 +1331,7 @@ body.menu-open {
       height: 3.2rem;
       place-items: center;
       border-radius: 50%;
-      background: $green;
+      background: $green-deep;
       color: $lime;
       font-family: var(--display);
       font-size: 2rem;
@@ -1365,7 +1367,7 @@ body.menu-open {
 }
 
 .fake-button {
-  background: $green;
+  background: $green-deep;
   color: $white;
   text-align: center;
 }
@@ -1678,7 +1680,7 @@ body.menu-open {
   > span:first-child {
     grid-column: 2;
     padding-left: 1.5rem;
-    opacity: 0.45;
+    opacity: 0.62; // WCAG AA (teks besar) di atas $cream
   }
 
   > span:last-child {
@@ -1738,7 +1740,7 @@ body.menu-open {
 
   &__other {
     border-left: 1px solid rgba($green-ink, 0.35);
-    color: rgba($green-ink, 0.58);
+    color: rgba($green-ink, 0.7); // WCAG AA di atas $cream
   }
 
   &__pull {
@@ -2105,7 +2107,7 @@ body.menu-open {
   justify-content: space-between;
   gap: 2rem;
   padding: 1.35rem var(--pad) 2.2rem;
-  color: rgba($white, 0.45);
+  color: rgba($white, 0.72); // WCAG AA di atas $green-deep
   font-size: 0.62rem;
   font-weight: 700;
   letter-spacing: 0.05em;
