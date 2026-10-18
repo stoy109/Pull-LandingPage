@@ -1,9 +1,8 @@
-import { useEffect, useRef } from 'react'
+import { lazy, Suspense, useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Lenis from 'lenis'
 import Header from './components/Header'
-import ThreeBackdrop from './components/ThreeBackdrop'
 import FlowSection from './components/FlowSection'
 import BottomOverscroll from './components/BottomOverscroll'
 import {
@@ -13,6 +12,9 @@ import {
   ProblemSection,
   SolutionSection,
 } from './components/Sections'
+
+// Latar Three.js dimuat setelah render awal agar bundle utama tetap ringan.
+const ThreeBackdrop = lazy(() => import('./components/ThreeBackdrop'))
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -72,7 +74,9 @@ export default function App() {
   return (
     <>
       <div className="scroll-meter" ref={meterRef} aria-hidden="true" />
-      <ThreeBackdrop />
+      <Suspense fallback={<div className="three-backdrop" aria-hidden="true" />}>
+        <ThreeBackdrop />
+      </Suspense>
       <Header />
       <main id="main" tabIndex={-1}>
         <HeroSection />
